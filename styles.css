@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Tera", serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #12161a, #24303c 100%);
+}
+
+.navbar {
+  background-color: #12161a;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.logo {
+  position: absolute;
+  cursor: pointer;
+  left: 0px;
+  margin-left: 30px;
+  top: 0px;
+  width: 100;
+  height: 100%;
+}
+
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-left: 190px;
+}
+
+.navbar_item {
+  height: 80px;
+}
+
+.navbar_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 30px;
+  height: 50px;
+  margin-right: 160px;
+  background-color: #12161a;
+  color: #fff;
+}
+
+.navbar_links:hover {
+  color: #359505;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    font-size: clamp(1.5vh, 2vw, 4rem);
+  }
+
+  .navbar_container {
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navbar_menu {
+    gap: 5vw;
+    margin: 0;
+  }
+
+  .navbar_links {
+    margin: auto;
+  }
+}
+
+.preview {
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  width: fit-content;
+}
+
+.preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 400px;
+  background-image: url(https://www.themarysue.com/wp-content/uploads/2024/02/i-saw-the-tv-glow.jpeg?w=1200&resize=1200%2C646);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
+  mask-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.welcome {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 0 0 10px #fff;
+  padding-top: 10px;
+  width: fit-content;
+}
+
+.favorite {
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  text-shadow: 0 0 10px #12161a;
+  text-align: justify;
+  padding-top: 10%;
+  margin: auto;
+  width: fit-content;
+  font-size: 20px;
+}
+
+.fo {
+  color: #607080;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0 0 10px #12161a;
+  padding-top: 100px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .preview::before {
+    margin: 0;
+  }
+
+  .welcome {
+    font-size: clamp(1vh, 2vw, 1rem);
+  }
+
+  .favorite {
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+
+  .fo {
+    font-size: clamp(2vh, 2vw, 4rem);
+  }
+}
+
+.films {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.slides {
+  max-width: 1100px;
+  margin: 50px;
+}
+
+.film_list .film_item .film_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 560px;
+  width: 300px;
+  display: block;
+  background: #12161a;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px #fff;
+  border: 5px solid transparent;
+}
+
+.film_list .film_item .film_link:hover {
+  border-color: #fff;
+  transition: 0.5s ease;
+  transform: scale(1.1);
+}
+.film_list .film_item .film_image {
+  width: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.film_list .film_item .film_image:hover {
+  color: #fff;
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+
+.film_list .film_item .film_director {
+  color: #fff;
+  background: #12161a;
+  font-size: 0.75rem;
+  margin: 10px 2px 18px;
+  padding-left: 10px;
+  width: fit-content;
+  height: 3px;
+}
+
+.film_list .film_item .film_title {
+  color: #fff;
+  background: #12161a;
+  font-size: 1.3rem;
+  padding-left: 10px;
+  margin-top: 5px;
+  width: fit-content;
+}
+
+/*.material-symbols-outlined {
+  color: #fff;
+  background: transparent;
+  font-size: 1rem;
+  padding-left: 275px;
+  width: 100%;
+  margin: 30px 0 5px;
+}*/
+
+.swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  display: inline-block;
+  opacity: 0.5;
+  background: #fff;
+}
+
+.slides .swiper-button-next {
+  color: #607080;
+  display: flex;
+}
+
+.slides .swiper-button-next:hover {
+  color: #fff;
+  transition: all 0.5 ease;
+}
+.slides .swiper-button-prev {
+  display: flex;
+  color: #607080;
+}
+
+.slides .swiper-button-prev:hover {
+  color: #fff;
+  transition: all 0.5 ease;
+}
+
+@media screen and (max-width: 768px) {
+  .film_list .film_item .film_director {
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+  .film_list .film_item .film_link {
+    padding: auto;
+    margin: auto;
+  }
+}
+
+.thoughts {
+  display: block;
+  color: #607080;
+}
+
+.thoughts-title {
+  text-shadow: 0 0 10px #fff;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.thoughts-director {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.synopsis-h {
+  color: #607080;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.synopsis-t {
+  text-align: justify;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.review-h {
+  color: #607080;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.review-t {
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.thoughts.active {
+  display: block;
+}
+
+.socials {
+  font-style: normal;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.footer-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer-icons {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.footer-icons a {
+  background-color: transparent;
+  border-radius: 100%;
+}
+
+.footer-icons a:hover {
+  background-color: #fff;
+  transition: 0.5s;
+  padding: 30px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  text-shadow: 0 0 10px #607080;
+  color: #12161a;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .thoughts-title {
+    font-size: clamp(2vh, 2vw, 4rem);
+  }
+  .thoughts-director {
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+  .thoughts {
+    margin: 10px;
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+
+  .socials {
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+
+  .copyright {
+    font-size: clamp(1vh, 2vw, 4rem);
+  }
+}

@@ -1,0 +1,38 @@
+new Swiper('.slides', {
+    loop: true, 
+    spaceBetween: 300,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      764: {
+        slidesPerView: 1
+      },
+      1024: {
+        slidesPerView: 1
+      },
+    }
+    
+    ,on: {
+      slideChange: function() {
+        const activeIndex = this.realIndex; 
+        const thoughts = document.querySelectorAll('.thoughts'); 
+        thoughts.forEach((thought, i) => { 
+          thought.style.display = i === activeIndex ? 'block' : 'none'; 
+        });
+      }
+    }
+
+  });
